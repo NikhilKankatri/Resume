@@ -3,69 +3,515 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resume Download</title>
+<title>Nikhil Kankatri Resume</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
 }
 
 body{
-    background:#f5f5f5;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
+background:#eef3f9;
+padding:30px;
 }
 
-.card{
-    background:#fff;
-    width:400px;
-    padding:40px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 10px 20px rgba(0,0,0,.15);
+.resume-card{
+max-width:1150px;
+margin:auto;
+background:#fff;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
 
-h1{
-    color:#333;
-    margin-bottom:10px;
+.resume-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 35px;
+border-bottom:1px solid #ddd;
+background:#fff;
+}
+
+.resume-header h1{
+font-size:32px;
+color:#173d72;
+}
+
+.buttons{
+display:flex;
+gap:15px;
+}
+
+.btn{
+padding:12px 24px;
+border:none;
+border-radius:40px;
+font-size:15px;
+font-weight:600;
+cursor:pointer;
+text-decoration:none;
+transition:.3s;
+}
+
+.view{
+background:#eef4ff;
+color:#173d72;
+}
+
+.download{
+background:#173d72;
+color:#fff;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
+.resume-body{
+padding:35px;
+}
+
+.resume-preview{
+background:#fbfcff;
+border:1px solid #dbe7f6;
+border-radius:20px;
+padding:40px;
+}
+
+.resume-preview h2{
+font-size:42px;
+color:#102542;
+}
+
+.title{
+font-size:20px;
+color:#2d74ff;
+margin:10px 0 25px;
+border-bottom:2px solid #dce7f7;
+padding-bottom:10px;
+}
+
+.contact{
+display:flex;
+flex-wrap:wrap;
+gap:25px;
+background:#eef5ff;
+padding:16px 20px;
+border-radius:40px;
+margin-bottom:35px;
+}
+
+.contact span{
+font-size:15px;
+}
+
+.contact i{
+color:#2d74ff;
+margin-right:8px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 2fr;
+gap:40px;
+}
+
+.section{
+margin-bottom:30px;
+}
+
+.section h3{
+color:#173d72;
+margin-bottom:15px;
+padding-bottom:8px;
+border-bottom:2px solid #dbe7f6;
+}
+
+.section ul{
+list-style:none;
+}
+
+.section li{
+margin-bottom:12px;
+line-height:1.6;
+}
+
+.tags{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.tag{
+background:#e8f1ff;
+padding:7px 14px;
+border-radius:25px;
+font-size:14px;
+}
+
+.project{
+margin-bottom:20px;
+}
+
+.project b{
+color:#173d72;
 }
 
 p{
-    color:#666;
-    margin-bottom:30px;
+line-height:1.7;
 }
 
-.download-btn{
-    display:inline-block;
-    text-decoration:none;
-    background:#007BFF;
-    color:#fff;
-    padding:15px 30px;
-    border-radius:8px;
-    font-size:18px;
-    transition:.3s;
+@media(max-width:768px){
+
+.resume-header{
+flex-direction:column;
+gap:20px;
 }
 
-.download-btn:hover{
-    background:#0056b3;
+.contact{
+border-radius:18px;
 }
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.resume-preview h2{
+font-size:30px;
+}
+
+}
+
+@media print{
+
+body{
+padding:0;
+background:white;
+}
+
+.resume-header{
+display:none;
+}
+
+.resume-card{
+box-shadow:none;
+border-radius:0;
+}
+
+.resume-preview{
+border:none;
+}
+
+}
+
 </style>
 
 </head>
+
 <body>
 
-<div class="card">
-    <h1>My Resume</h1>
-    <p>Click the button below to download my resume.</p>
+<div class="resume-card">
 
-    <a href="resume.pdf" download="Nikhil_Kankatri_Resume.pdf" class="download-btn">
-        📄 Download Resume
-    </a>
+<div class="resume-header">
+
+<h1>
+<i class="fa-solid fa-file-user"></i>
+Resume
+</h1>
+
+<div class="buttons">
+
+<button class="btn view"
+onclick="document.querySelector('.resume-preview').scrollIntoView({behavior:'smooth'})">
+<i class="fas fa-eye"></i>
+View
+</button>
+
+<a href="resume.pdf" download class="btn download">
+<i class="fas fa-download"></i>
+Download
+</a>
+
+</div>
+
+</div>
+
+<div class="resume-body">
+
+<div class="resume-preview">
+
+<h2>NIKHIL KANKATRI</h2>
+
+<div class="title">
+Cybersecurity Enthusiast • SOC Analyst Aspirant
+</div>
+
+<div class="contact">
+
+<span>
+<i class="fas fa-phone"></i>
++91 8073917021
+</span>
+
+<span>
+<i class="fas fa-envelope"></i>
+nkankatri@gmail.com
+</span>
+
+<span>
+<i class="fas fa-location-dot"></i>
+Mangalore, Karnataka
+</span>
+
+</div>
+
+<div class="grid">
+
+<!-- Left -->
+
+<div>
+
+<div class="section">
+
+<h3>Education</h3>
+
+<ul>
+
+<li>
+
+<b>B.E. CSE (IoT, Cybersecurity & Blockchain)</b><br>
+
+Alva's Institute of Engineering & Technology<br>
+
+Expected Graduation: 2027<br>
+
+CGPA: 7.5 / 10
+
+</li>
+
+<li>
+
+<b>PUC</b><br>
+
+RLS College, Dharwad (2023)<br>
+
+76.36%
+
+</li>
+
+<li>
+
+<b>SSLC</b><br>
+
+Pavan English Medium High School<br>
+
+65.6%
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="section">
+
+<h3>Skills</h3>
+
+<div class="tags">
+
+<span class="tag">Python</span>
+
+<span class="tag">Bash</span>
+
+<span class="tag">Linux</span>
+
+<span class="tag">Kali Linux</span>
+
+<span class="tag">Ubuntu</span>
+
+<span class="tag">Wireshark</span>
+
+<span class="tag">Nmap</span>
+
+<span class="tag">Burp Suite</span>
+
+<span class="tag">Splunk</span>
+
+<span class="tag">TCP/IP</span>
+
+<span class="tag">DNS</span>
+
+<span class="tag">VPN</span>
+
+<span class="tag">Firewalls</span>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h3>Certifications</h3>
+
+<ul>
+
+<li>Cybersecurity for Businesses – The Fundamental Edition</li>
+
+<li>Cisco Introduction to Cybersecurity</li>
+
+<li>Cisco Cybersecurity Essentials</li>
+
+<li>NPTEL – Introduction to Internet of Things</li>
+
+<li>Infosys Springboard – Network Security</li>
+
+</ul>
+
+</div>
+
+<div class="section">
+
+<h3>Languages</h3>
+
+<ul>
+
+<li>English</li>
+
+<li>Marathi</li>
+
+<li>Kannada</li>
+
+<li>Hindi</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<!-- Right -->
+
+<div>
+
+<div class="section">
+
+<h3>Professional Summary</h3>
+
+<p>
+
+Cybersecurity enthusiast with knowledge of network security, Linux administration, threat detection, vulnerability assessment, and security monitoring. Skilled in analyzing security incidents, monitoring logs, and investigating threats. Passionate about SOC operations, ethical hacking, and continuous learning.
+
+</p>
+
+</div>
+
+<div class="section">
+
+<h3>Projects</h3>
+
+<div class="project">
+
+<b>Vulnerability Assessment Using Nmap</b>
+
+<p>
+
+Conducted network scanning, service enumeration, vulnerability assessment, and generated security reports to identify open ports and security risks.
+
+</p>
+
+</div>
+
+<div class="project">
+
+<b>SOC Monitoring Lab Using Splunk</b>
+
+<p>
+
+Created dashboards for log monitoring, investigated simulated security alerts, and practiced incident response workflows.
+
+</p>
+
+</div>
+
+<div class="project">
+
+<b>Gesture Controlled Virtual Mouse</b>
+
+<p>
+
+Developed a gesture-controlled virtual mouse using Python, OpenCV, and MediaPipe for real-time cursor control.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h3>Technical Skills</h3>
+
+<p>
+
+<b>Security Tools:</b> Wireshark, Nmap, Burp Suite, Splunk
+
+</p>
+
+<br>
+
+<p>
+
+<b>Operating Systems:</b> Linux (Ubuntu & Kali), Windows
+
+</p>
+
+<br>
+
+<p>
+
+<b>Networking:</b> TCP/IP, DNS, HTTP/HTTPS, VPN, Firewalls
+
+</p>
+
+<br>
+
+<p>
+
+<b>Programming:</b> Python, Bash Scripting
+
+</p>
+
+</div>
+
+<div class="section">
+
+<h3>Achievements</h3>
+
+<ul>
+
+<li>Participated in Capture The Flag (CTF) competitions.</li>
+
+<li>Solved cybersecurity challenges on Hack The Box.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </body>
